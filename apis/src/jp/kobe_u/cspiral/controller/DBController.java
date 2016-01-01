@@ -233,23 +233,25 @@ public class DBController {
 	//-----------------------------------------------------------
 
 	//---------------------rankingコレクション-------------------------
-	public void setRanking(String gameMode , String name , String score){
+	public void setRanking(String gameMode , String name , String score, int limitTime){
 		DBObject query = new BasicDBObject();
 		query.put("gameMode", gameMode);
 		query.put("name", name);
 		query.put("score", Double.valueOf(score));
+		query.put("limitTime", limitTime);
 		rankingCollection.insert(query);
 	}
 
-	public ArrayList<Ranking> getRanking(String gameMode, int rankCount){
+	public ArrayList<Ranking> getRanking(String gameMode, int rankCount, int rankSort, int limitTime){
 
 		ArrayList<Ranking> ranking = new ArrayList<Ranking>();
 
 		DBObject query = new BasicDBObject();
 		query.put("gameMode", gameMode);
+		query.put("limitTime", limitTime);
 		DBCursor cursor = rankingCollection.find(query);
 		DBObject orderBy = new BasicDBObject();
-		orderBy.put("score",1);
+		orderBy.put("score",rankSort);
 		cursor.sort(orderBy);
 		cursor.limit(rankCount);
 		for(DBObject o: cursor){
