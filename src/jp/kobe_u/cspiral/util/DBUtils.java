@@ -20,7 +20,7 @@ public class DBUtils {
 	private DB db;
 
 	//private final String host = new String("");
-	private final String host = new String("localhost");
+	private final String host = new String("");
 	private final String dbName = new String("citytori");
 
 	private DBUtils() {
