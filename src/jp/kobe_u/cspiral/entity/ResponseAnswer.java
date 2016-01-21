@@ -10,6 +10,7 @@ public class ResponseAnswer {
 	private String nextStringWith;
 	private String locationName;
 	private String phonetic;
+	private boolean isPass;
 
 	public ResponseAnswer(){
 
@@ -51,6 +52,12 @@ public class ResponseAnswer {
 		this.phonetic = phonetic;
 	}
 
+	@XmlElement(name="isPass")
+	public boolean getIsPass() {
+		return isPass;
+	}
 
-
+	public void setIsPass(boolean value) {
+		this.isPass = value;
+	}
 }
