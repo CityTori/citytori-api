@@ -1,0 +1,4 @@
+env.properties
+bin/
+build/
+*.DS_Store
