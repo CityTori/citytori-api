@@ -10,6 +10,8 @@ public class Ranking {
 
 	private String score;
 
+	private int limitTime;
+
 	public String getId() {
 		return id;
 	}
@@ -26,6 +28,10 @@ public class Ranking {
 		return name;
 	}
 
+	public int getLimitTIme(){
+		return limitTime;
+	}
+
 	public void setName(String name) {
 		this.name = name;
 	}
@@ -36,6 +42,10 @@ public class Ranking {
 
 	public void setScore(String score) {
 		this.score = score;
+	}
+
+	public void setLimitTime(int limitTime){
+		this.limitTime = limitTime;
 	}
 
 
