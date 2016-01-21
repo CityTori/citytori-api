@@ -1,4 +1,4 @@
-build.properties
+env.properties
 bin/
 build/
 *.DS_Store
