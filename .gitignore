@@ -1,3 +1,4 @@
 build.properties
-build/*
+bin/
+build/
 *.DS_Store
