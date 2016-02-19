@@ -9,6 +9,7 @@ public class QueryAnswer{
 	private String userId;
 	private String locationName;
 	private String phonetic;
+	private boolean isPass;
 
 	@XmlElement(name="userId")
 	public String getUserId() {
@@ -35,7 +36,12 @@ public class QueryAnswer{
 		this.phonetic = phonetic;
 	}
 
+	@XmlElement(name="isPass")
+	public boolean getIsPass() {
+		return isPass;
+	}
 
-
-
+	public void setIsPass(boolean value) {
+		this.isPass = value;
+	}
 }

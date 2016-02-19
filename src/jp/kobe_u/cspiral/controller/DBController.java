@@ -123,7 +123,6 @@ public class DBController {
 		query.put("limitTime", limitTime);
 		query.put("userId", userId);
 		roomsCollection.insert(query);
-
 		DBObject result = roomsCollection.findOne(query);
 		ObjectId objectId = (ObjectId)result.get("_id");
 		String roomId = objectId.toString();
